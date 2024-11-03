@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button"
+
 import { getPatient } from "@/lib/actions/patient.actions";
 import AppointmentForm from "@/components/forms/AppointmentForm";
 export default async function NewAppointment({ params }: SearchParamProps) {

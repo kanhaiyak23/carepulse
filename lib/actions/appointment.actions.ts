@@ -1,5 +1,5 @@
 'use server'
-import { DATABASE_ID, APPOINTMENT_COLLECTION_ID, ENDPOINT, BUCKET_ID, database, messaging } from "../appwrite.config";
+import { DATABASE_ID, APPOINTMENT_COLLECTION_ID, database, messaging } from "../appwrite.config";
 import { ID, Query } from "node-appwrite";
 import { formatDateTime } from "../utils";
 import { parseStringify } from "../utils";

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import  {getAppointment}  from "@/lib/actions/appointment.actions";
 import { Doctors } from "@/constants";
-import { format } from "path";
+
 import { formatDateTime } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 const success = async({params:{userId},searchParams}:SearchParamProps) => {

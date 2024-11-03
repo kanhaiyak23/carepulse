@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Label } from "../ui/label";
-import { Button } from "@/components/ui/button";
+
 import { Form, FormControl } from "@/components/ui/form";
 import SubmitButton from "@/components/CustomSubmitbtn";
 // import { Input } from "@/components/ui/input";
@@ -12,7 +12,7 @@ import CustomFormField from "@/components/CustomFormField";
 import { useState } from "react";
 import { PatientFormValidation } from "@/lib/validation";
 import { useRouter } from "next/navigation";
-import { createUser } from "@/lib/actions/patient.actions";
+
 import { FormFieldType } from "./PatientForm";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import {
@@ -63,7 +63,7 @@ const RegisterForm = ({ user }: { user: User }) => {
       };
       
 
-      //@ts-ignore
+     // @ts-expect-error
       const patient = await registerPatient(patientData);
       if (patient) {
         router.push(`/patients/${user.$id}/new-appointment`);

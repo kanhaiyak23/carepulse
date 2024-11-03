@@ -12,7 +12,7 @@ export const  FileUploader=({files,onChange}:FileUploaderprops)=> {
   const onDrop = useCallback((acceptedFiles:File[]) => {
     onChange(acceptedFiles)
   }, [])
-  const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
+  const {getRootProps, getInputProps} = useDropzone({onDrop})
 
   return (
     <div className='file-upload' {...getRootProps()}>
