@@ -8,7 +8,7 @@ import { revalidatePath } from "next/cache";
 export const createAppointment = async (appointment: CreateAppointmentParams) => {
     try {
         const newAppointment = await database.createDocument(DATABASE_ID!, APPOINTMENT_COLLECTION_ID!, ID.unique(), appointment)
-
+        revalidatePath('/admin')
         return parseStringify(newAppointment)
     }
     catch (err) {
