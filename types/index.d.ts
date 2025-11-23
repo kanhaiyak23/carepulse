@@ -16,6 +16,9 @@ declare type SearchParamProps = {
   }
   declare interface User extends CreateUserParams {
     $id: string;
+    isPremium?: boolean;
+    premiumExpiryDate?: Date;
+    subscriptionOrderId?: string;
   }
   
   declare interface RegisterUserParams extends CreateUserParams {

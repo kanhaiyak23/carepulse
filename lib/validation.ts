@@ -117,3 +117,8 @@ export function getAppointmentSchema(type: string) {
             return ScheduleAppointmentSchema;
     }
 }
+export const login=z.object({
+    email:z.string().email("write correct email"),
+    password:z.string().min(8,"Password must be of 8 character")
+    
+})

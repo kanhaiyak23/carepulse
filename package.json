@@ -35,7 +35,8 @@
     "react-phone-number-input": "^3.4.9",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "cashfree-pg": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",

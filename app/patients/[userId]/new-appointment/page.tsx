@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import { getPatient } from "@/lib/actions/patient.actions";
 import AppointmentForm from "@/components/forms/AppointmentForm";
+import SubscriptionSection from "@/components/SubscriptionSection";
+
 export default async function NewAppointment({ params }: SearchParamProps) {
   const { userId } = await params;   // get the userId from the URL parameter.
 
@@ -16,6 +18,13 @@ export default async function NewAppointment({ params }: SearchParamProps) {
     <section className="remove-scrollbar container my-auto">
       <div className="sub-container max-w-[860px] flex-1 justify-between">
         <Image src="/assets/icons/logo-full.svg" alt="patient" height={1000} width={1000} className="mb-12 h-10 w-fit "/>
+
+        {/* Subscription Section */}
+        <SubscriptionSection 
+          userId={userId}
+          patientEmail={patient?.email}
+          patientName={patient?.name}
+        />
 
         <AppointmentForm type="create" userId = {userId} patientId = {patient.$id} />
         
